@@ -1,2 +1,3 @@
 runtime: nodejs20
-service: react-native-app
+service: react-native-barber-app-demo
+entrypoint: npm run prod

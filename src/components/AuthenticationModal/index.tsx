@@ -23,7 +23,7 @@ export default function AuthenticationModal({ isOpen }: { isOpen: boolean }) {
   return (
     <Modal
       isVisible={isOpen}
-      title={() => <LogoButton disabled width={146} height={37} />}
+      title={() => <LogoButton disabled />}
       text="You must have an account to access this feature."
       onDismiss={() => dispatch(AppActions.setIsAuthenticationModalOpen(false))}
       buttons={[

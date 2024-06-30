@@ -2,7 +2,6 @@ import * as eva from "@eva-design/eva";
 import { ApplicationProvider, IconRegistry } from "@ui-kitten/components";
 import { EvaIconsPack } from "@ui-kitten/eva-icons";
 import { Provider } from "react-redux";
-import { AuthProvider } from "./src/context-api/auth-context";
 import reduxStore from "./src/store";
 
 import {
@@ -63,12 +62,10 @@ export default function App() {
       <ApplicationProvider
         theme={theme}
         mapping={eva.mapping}
-        customMapping={mapping}
+        customMapping={{ ...eva.mapping, ...mapping }}
       >
         <Provider store={reduxStore}>
-          <AuthProvider token={null}>
-            <AppContainer />
-          </AuthProvider>
+          <AppContainer />
         </Provider>
       </ApplicationProvider>
     </NavigationContainer>

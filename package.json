@@ -7,6 +7,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
+    "build": "tsc",
+    "prod": "expo start --no-dev --minify --port 8080",
     "lint": "eslint --ext .js,.ts,.tsx src/"
   },
   "dependencies": {
@@ -40,6 +42,7 @@
   "devDependencies": {
     "@babel/core": "^7.24.5",
     "@eslint/js": "^9.1.1",
+    "@types/eslint__js": "^8.42.3",
     "@types/react": "^18.2.79",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
